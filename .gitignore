@@ -1,0 +1,4 @@
+/dist
+/.goshipdone.local.yml
+/withenv
+/sum.cov
