@@ -54,14 +54,14 @@ func main() {
 	}
 
 	env := withenv.New()
-	if err := env.SetEnviron(os.Environ()); err != nil {
+	if err := env.Load(os.Environ()); err != nil {
 		fmt.Fprintf(os.Stderr, "unable to import OS environment: %v\n", err)
 		os.Exit(1)
 	}
 
 	err := env.Read(args[0])
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "error reading PATH: %v\n", err)
+		fmt.Fprintf(os.Stderr, "%v\n", err)
 		os.Exit(1)
 	}
 

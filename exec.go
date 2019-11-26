@@ -1,11 +1,9 @@
 package withenv
 
 import (
-	"fmt"
 	"io"
 	"os"
 	"os/exec"
-	"strings"
 	"syscall"
 )
 
@@ -41,6 +39,5 @@ func (env *Env) Child(out, err io.Writer, cmd string, args ...string) error {
 // Run runs a given command, waiting for execution, then returns
 // the subprocess' return value.
 func (env *Env) Run(cmd string, args ...string) error {
-	fmt.Printf("Running %s %s\n", cmd, strings.Join(args, " "))
 	return env.Child(os.Stdout, os.Stderr, cmd, args...)
 }

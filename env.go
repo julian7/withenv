@@ -27,7 +27,8 @@ func New() *Env {
 	return &Env{Vars: map[string]string{}}
 }
 
-func (env *Env) SetEnviron(envs []string) error {
+// Load loads environment settings from slice
+func (env *Env) Load(envs []string) error {
 	for _, item := range envs {
 		if err := env.setenv(item); err != nil {
 			return fmt.Errorf("setting envinonment %q: %v", item, err)
@@ -35,6 +36,13 @@ func (env *Env) SetEnviron(envs []string) error {
 	}
 
 	return nil
+}
+
+// LoadMap loads environment settings from string map
+func (env *Env) LoadMap(envs map[string]string) {
+	for key, val := range envs {
+		env.Set(key, val)
+	}
 }
 
 // GetOrDefault retrieves an env. value by key, if exists.
@@ -91,7 +99,7 @@ func (env *Env) Expand(s string) string {
 func (env *Env) Read(fn string) error {
 	fd, err := envFS.Open(fn)
 	if err != nil {
-		return fmt.Errorf("reading env file: %w", err)
+		return err
 	}
 
 	scanner := bufio.NewScanner(bufio.NewReader(fd))
