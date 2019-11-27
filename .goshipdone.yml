@@ -20,6 +20,11 @@ archives:
       - build
     commondir: ""
     compression: gzip
+  - type: checksum
+    algorithm: sha512
+    builds:
+      - archive
+    output: "{{.ProjectName}}-{{.Version}}-SHA512SUMS"
   - type: sensu-asset
     build: archive
     asset_url: "https://github.com/julian7/{{.ProjectName}}/releases/download/{{.Version}}/{{.ArchiveName}}"

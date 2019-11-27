@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-No changes so far.
+Add:
+
+- bonsai release
 
 ## [v0.1.0] - 2019-11-26
 

@@ -1,4 +1,4 @@
-# withenv: runs processes with environment settings from a file
+# withenv: runs commands with extra environment settings
 
 It's just like envdir, but for go, and it reads files.
 
@@ -7,6 +7,27 @@ It's just like envdir, but for go, and it reads files.
 When I looked around, I couldn't find a tool for a small need: to run an application quickly with appropriate environment variables set, when no shell is available.
 
 This particular use case helps running handlers in [sensu-go](https://sensu.io/), while secrets are not exposed to the API / web UI. Information about a file on a system is less threatening than seeing the actual secret set by an environment variable, which is not even redacted by the user interface.
+
+## Usage
+
+```text
+usage: withenv PATH COMMAND [ARGS...]
+
+Set environment variables defined in file PATH, and run COMMAND.
+
+  -v       print program version
+  -h       this help
+Arguments:
+  PATH     path to a file containing variable declarations in a KEY=VAL
+           format. Spaces around KEY and VAL are NOT stripped. VAL has
+                   variable expansion.
+  COMMAND  next executable in line, which will be run with the newly set
+           environment variables.
+  ARGS...  any command line items are taken to COMMAND after variable
+           expansion.
+```
+
+This tool can be used in [sensu-go](https://sensu.io/), chaining other commands for checks or handlers. Currently, both in [asset](https://docs.sensu.io/sensu-go/latest/reference/assets/) and in Bonsai form, albeit this is still in the works.
 
 ## Legal
 
