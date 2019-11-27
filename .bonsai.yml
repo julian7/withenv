@@ -3,7 +3,7 @@ description: "#{repo}"
 builds:
 - platform: "linux"
   arch: "amd64"
-  asset_filename: "#{repo}-#{version}-linux_amd64.tar.gz"
+  asset_filename: "#{repo}-#{version}-linux-amd64.tar.gz"
   sha_filename: "#{repo}-#{version}-SHA512SUMS"
   filter:
   -  "entity.system.os == 'linux'"
