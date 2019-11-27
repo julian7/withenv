@@ -24,6 +24,7 @@ archives:
     algorithm: sha512
     builds:
       - archive
+    id: sha512sum
     output: "{{.ProjectName}}-{{.Version}}-SHA512SUMS"
   - type: sensu-asset
     build: archive
@@ -32,6 +33,7 @@ publishes:
   - type: github
     builds:
       - archive
+      - sha512sum
       - sensu-asset
     owner: julian7
     name: withenv
