@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+No changes so far.
+
+## [v0.1.2] - 2019-11-27
+
 Fix:
 
 - upload checksum with github release
@@ -26,6 +30,7 @@ Add:
 - rudimendary exec functions
 - withenv library
 
-[Unreleased]: https://github.com/julian7/withenv/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/julian7/withenv/compare/v0.1.2...HEAD
+[v0.1.2]: https://github.com/julian7/withenv/compare/v0.1.1...v0.1.2
 [v0.1.1]: https://github.com/julian7/withenv/compare/v0.1.0...v0.1.1
 [v0.1.0]: https://github.com/julian7/withenv/releases/tag/v0.1.0
