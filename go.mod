@@ -1,13 +1,29 @@
 module github.com/julian7/withenv
 
-go 1.13
+go 1.17
 
 require (
-	github.com/go-test/deep v1.0.4
-	github.com/julian7/goshipdone v0.3.0
-	github.com/julian7/sensulib v0.1.3
-	github.com/magefile/mage v1.9.0
-	github.com/spf13/afero v1.1.2
-	golang.org/x/crypto v0.0.0-20190426145343-a29dc8fdc734 // indirect
-	golang.org/x/net v0.0.0-20190620200207-3b0461eec859 // indirect
+	github.com/go-test/deep v1.0.8
+	github.com/julian7/goshipdone v0.5.0
+	github.com/julian7/sensulib v0.3.0
+	github.com/magefile/mage v1.12.1
+	github.com/spf13/afero v1.8.1
+)
+
+require (
+	github.com/blang/semver v3.5.1+incompatible // indirect
+	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/google/go-github/v28 v28.1.1 // indirect
+	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
+	github.com/hashicorp/go-retryablehttp v0.7.0 // indirect
+	github.com/xanzy/go-gitlab v0.55.1 // indirect
+	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect
+	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd // indirect
+	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8 // indirect
+	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
+	google.golang.org/protobuf v1.27.1 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
